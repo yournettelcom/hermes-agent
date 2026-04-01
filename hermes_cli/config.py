@@ -517,7 +517,14 @@ DEFAULT_CONFIG = {
     },
 
     # Config schema version - bump this when adding new required fields
-    "_config_version": 11,
+    "_config_version": 11,,
+    
+    # Sanitization layer for sensitive data (optional, opt-in)
+    "sanitization": {
+        "enabled": False,  # Disabled by default for backward compatibility
+        "mode": "off",     # "off" | "moderate" | "strict"
+        "custom_patterns": [],
+    }
 }
 
 # =============================================================================
